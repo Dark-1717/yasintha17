@@ -2,29 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Packages - GlobeTrotters</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">Globe<span>Trotters</span></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="packages.html" class="active">Packages</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <button id="lang-en" data-lang="en">EN</button>
-            <button id="lang-hi" data-lang="hi">HI</button>
-        </div>
-    </header>
-
-    <main>
+<?php
+$pageTitle = "Travel Packages";
+$activePage = "packages";
+include 'templates/header.php';
+?>
         <section id="packages-list">
             <h2 data-translate="packagesPageTitle">Our Exclusive Travel Packages</h2>
             <p data-translate="packagesPageSubtitle">Find the perfect curated package for your next adventure. We combine the best experiences at unbeatable prices.</p>
@@ -75,9 +57,4 @@
 
     <footer>
         <p>&copy; 2024 GlobeTrotters. All rights reserved.</p>
-    </footer>
-
-    <script src="js/i18n.js"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php include 'templates/footer.php'; ?>

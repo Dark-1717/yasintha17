@@ -2,34 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - GlobeTrotters</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">Globe<span>Trotters</span></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <button id="lang-en" data-lang="en">EN</button>
-            <button id="lang-hi" data-lang="hi">HI</button>
-        </div>
-    </header>
-
-    <main>
+<?php
+$pageTitle = "Contact Us";
+$activePage = "contact";
+include 'templates/header.php';
+?>
         <section id="contact-form-section">
             <h2 data-translate="contactPageTitle">Get in Touch With Us</h2>
             <p data-translate="contactPageSubtitle">We'd love to hear from you! Whether you have a question about our packages, want to plan a custom trip, or just want to say hello, please use the form below or contact us via phone or email.</p>
 
-            <form id="contactForm" action="submit_form.php" method="POST">
+            <form id="contactForm" action="contact_submit.php" method="POST">
                 <div class="form-group">
                     <label for="name" data-translate="formFullName">Full Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -84,9 +66,4 @@
 
     <footer>
         <p>&copy; 2024 GlobeTrotters. All rights reserved.</p>
-    </footer>
-
-    <script src="js/i18n.js"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php include 'templates/footer.php'; ?>

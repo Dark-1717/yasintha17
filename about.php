@@ -2,29 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - GlobeTrotters</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">Globe<span>Trotters</span></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <button id="lang-en" data-lang="en">EN</button>
-            <button id="lang-hi" data-lang="hi">HI</button>
-        </div>
-    </header>
-
-    <main>
+<?php
+$pageTitle = "About Us";
+$activePage = "about";
+include 'templates/header.php';
+?>
         <section id="about-us-content">
             <h2 data-translate="aboutPageTitle">About GlobeTrotters</h2>
             <img src="images/team-photo.jpg" alt="GlobeTrotters Team" style="width:100%; max-width:600px; margin: 20px auto; display:block; border-radius: var(--border-radius);">
@@ -59,9 +41,4 @@
 
     <footer>
         <p>&copy; 2024 GlobeTrotters. All rights reserved.</p>
-    </footer>
-
-    <script src="js/i18n.js"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php include 'templates/footer.php'; ?>
