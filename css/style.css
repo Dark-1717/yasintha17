@@ -1,0 +1,650 @@
+/* Modern Theme for GlobeTrotters */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+
+/* CSS Variables for easier theme management */
+:root {
+    --primary-color: #0077cc; /* Vibrant Blue */
+    --secondary-color: #ff6600; /* Energetic Orange */
+    --accent-color: #f4a261; /* Sandy Accent */
+    --text-color: #333333;
+    --light-text-color: #ffffff;
+    --background-color: #f8f9fa; /* Light Gray Background */
+    --card-background: #ffffff;
+    --footer-background: #2c3e50; /* Dark Blue-Gray */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    --font-hindi: 'Noto Sans Devanagari', sans-serif;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease; /* Smooth transition for potential dark mode */
+}
+
+/* Utility class for Hindi text */
+.lang-hi {
+    font-family: var(--font-hindi), var(--font-primary); /* Fallback to primary font */
+}
+
+/* Header & Navigation */
+header {
+    background: var(--card-background);
+    color: var(--text-color);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* For logo and nav/lang switcher */
+    align-items: center;
+    padding: 1rem 5%; /* Add horizontal padding */
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+header .logo span {
+    color: var(--secondary-color);
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Use flex for horizontal alignment */
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 12px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    color: var(--primary-color);
+    background-color: rgba(0, 119, 204, 0.05);
+}
+
+/* Language Switcher Styles */
+.language-switcher button {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #e05a00; /* Darker orange */
+    transform: translateY(-2px);
+}
+.language-switcher button.active-lang {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+
+/* Main Content Area */
+main {
+    padding: 20px 5%; /* Consistent padding with header */
+    max-width: 1400px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-banner.jpg') no-repeat center center/cover; /* Placeholder image */
+    color: var(--light-text-color);
+    padding: 6rem 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Make hero section taller */
+}
+
+#hero h1 {
+    font-size: 3.5rem; /* Larger font size */
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    max-width: 700px; /* Limit width of paragraph */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+#hero .btn-cta {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: var(--card-shadow);
+}
+
+#hero .btn-cta:hover {
+    background-color: #e05a00;
+    transform: translateY(-3px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+
+/* General Section Styling */
+main section {
+    padding: 3rem 0;
+    margin-bottom: 30px;
+}
+
+main section h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+main section h2::after { /* Underline effect for headings */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+
+/* Card Styling (Destinations, Packages) */
+#popular-destinations .grid-container,
+#destinations-list .grid-container,
+#packages-list .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+
+.destination, .destination-item, .package-item {
+    background: var(--card-background);
+    border: none; /* Remove old border */
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure content respects border radius */
+    display: flex;
+    flex-direction: column; /* For content alignment */
+}
+
+.destination:hover, .destination-item:hover, .package-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.destination img, .destination-item img, .package-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: none; /* Remove old border */
+    margin-bottom: 0; /* Remove old margin */
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Allow content to fill space */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Allow paragraph to take up available space */
+    line-height: 1.6;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 1rem; /* Space above price */
+}
+
+.btn-details, .btn-submit {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: auto; /* Push button to bottom of card */
+}
+
+.btn-details:hover, .btn-submit:hover {
+    background-color: #005fa3; /* Darker primary */
+    transform: translateY(-2px);
+}
+.btn-submit { /* Make submit button on contact page more prominent */
+    background-color: var(--secondary-color);
+}
+.btn-submit:hover {
+    background-color: #e05a00;
+}
+
+
+/* About Us Page Specifics */
+#about-us-content {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+#about-us-content img {
+    border: 5px solid var(--accent-color);
+}
+
+#about-us-content h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+#about-us-content ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+#about-us-content ul li {
+    margin-bottom: 0.7rem;
+    padding-left: 25px;
+    position: relative;
+}
+#about-us-content ul li::before { /* Custom bullet */
+    content: '✔';
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.team-member {
+    background: var(--background-color); /* Slightly different background */
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+.team-member h4 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+/* Contact Page Specifics */
+#contact-form-section form {
+    max-width: 800px; /* Wider form */
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: 30px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da; /* Lighter border */
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 204, 0.25);
+    outline: none;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#contact-details {
+    text-align: center;
+    margin-top: 3rem;
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+#contact-details p {
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+}
+#contact-details strong {
+    color: var(--primary-color);
+}
+#contact-details a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+#contact-details a:hover {
+    text-decoration: underline;
+}
+
+#map div { /* Map placeholder styling */
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: var(--border-radius);
+}
+
+
+/* Special Offers Section on Homepage */
+.offer {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: var(--light-text-color);
+    padding: 25px;
+    margin-bottom: 15px;
+    border-left: none; /* Remove old border */
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.offer h3 {
+    color: var(--light-text-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.offer p {
+    font-size: 1rem;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: var(--accent-color); /* Light sandy background for this section */
+    padding-top: 1px; /* Fix margin collapse */
+    padding-bottom: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+}
+#testimonials h2 {
+    color: var(--footer-background); /* Darker heading for contrast */
+}
+#testimonials h2::after{
+    background-color: var(--footer-background);
+}
+
+
+.testimonial {
+    background: var(--card-background);
+    padding: 25px;
+    margin: 20px auto; /* Center testimonials if they are single column */
+    border: none;
+    border-left: 5px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-style: italic;
+    box-shadow: var(--card-shadow);
+    max-width: 700px; /* Limit width of testimonials */
+}
+.testimonial p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.testimonial p::before { /* Quotation mark styling */
+    content: "“";
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 5px;
+    vertical-align: -0.4em; /* Align quote better */
+    line-height: 0;
+}
+.testimonial p::after {
+    content: "”";
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-left: 5px;
+    vertical-align: -0.4em;
+    line-height: 0;
+}
+
+
+/* Contact Info on Homepage */
+#contact-info {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+#contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+#contact-info h2 {
+    color: var(--primary-color);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--footer-background);
+    color: var(--light-text-color);
+    margin-top: 40px;
+}
+footer p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) { /* Tablet and larger mobile */
+    #hero h1 {
+        font-size: 2.8rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
+    }
+    main section h2 {
+        font-size: 1.9rem;
+    }
+    .destination, .destination-item, .package-item {
+        /* Grid will handle this, but if not using grid for parent: */
+        /* width: calc(50% - 30px); */
+    }
+    header {
+        flex-direction: column;
+        padding: 1rem 2%;
+    }
+    header .logo {
+        margin-bottom: 0.5rem;
+    }
+    header nav ul {
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 5px 8px;
+    }
+    .language-switcher {
+        margin-top: 10px; /* Space if header wraps */
+    }
+}
+
+
+@media (max-width: 768px) { /* Mobile */
+    body {
+        line-height: 1.6;
+    }
+    header {
+        padding: 0.8rem 5%;
+    }
+    header nav ul li a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    .language-switcher button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+
+    #hero {
+        padding: 4rem 1rem;
+        min-height: 50vh;
+    }
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+    #hero p {
+        font-size: 1.1rem;
+    }
+    #hero .btn-cta {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    main section h2 {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    main section h2::after {
+        width: 60px;
+        height: 3px;
+    }
+
+    /* Grid handles single column automatically with minmax(300px, 1fr) */
+    /* .destination, .destination-item, .package-item {
+        width: calc(100% - 20px);
+        margin: 15px auto;
+    } */
+
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+    .card-content p {
+        font-size: 0.85rem;
+    }
+    .btn-details, .btn-submit {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #contact-form-section form {
+        padding: 20px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group textarea {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) { /* Smaller Mobile */
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+    main section h2 {
+        font-size: 1.5rem;
+    }
+    header nav ul {
+        flex-direction: column; /* Stack nav items fully */
+    }
+    header nav ul li {
+        margin: 8px 0; /* Vertical spacing for stacked nav */
+    }
+    .language-switcher {
+        width: 100%;
+        display: flex;
+        justify-content: space-around; /* Spread buttons */
+    }
+    .language-switcher button {
+        flex-grow: 1;
+        margin: 5px;
+    }
+}
