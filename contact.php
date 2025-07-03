@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <?php
-$pageTitle = "Contact Us";
+$pageTitle = "Contact LKD Travels";
 $activePage = "contact";
 include 'templates/header.php';
 ?>
@@ -48,10 +48,10 @@ include 'templates/header.php';
 
         <section id="contact-details">
             <h2 data-translate="contactDetailsTitle">Our Contact Information</h2>
-            <p><strong data-translate="contactAgencyName">GlobeTrotters Agency</strong></p>
+            <p><strong data-translate="contactAgencyName">LKD Travels</strong></p>
             <p data-translate="contactAddress">Address: 456 Adventure Avenue, Traveltown, USA</p>
             <p data-translate="contactPhone">Phone: (555) 123-4567</p>
-            <p><span data-translate="contactEmailLabel">Email:</span> <a href="mailto:contact@globetrotters.com">contact@globetrotters.com</a></p>
+            <p><span data-translate="contactEmailLabel">Email:</span> <a href="mailto:contact@lkdtravels.com">contact@lkdtravels.com</a></p>
             <p data-translate="contactBusinessHours">Business Hours: Monday - Friday, 9:00 AM - 6:00 PM (EST)</p>
         </section>
 

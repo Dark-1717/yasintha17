@@ -3,22 +3,28 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
 
-/* CSS Variables for easier theme management */
+/* CSS Variables for LKD Travels - Sri Lankan Theme */
 :root {
-    --primary-color: #0077cc; /* Vibrant Blue */
-    --secondary-color: #ff6600; /* Energetic Orange */
-    --accent-color: #f4a261; /* Sandy Accent */
-    --text-color: #333333;
+    /* Sri Lankan Inspired Palette */
+    --primary-color: #006A71;   /* Deep Teal/Ocean Blue - Similar to previous primary, but richer */
+    --secondary-color: #FF7F3F; /* Vibrant Saffron/Orange - Good for CTAs */
+    --accent-color: #F4A261;    /* Warm Sandy Beige/Light Gold - For backgrounds or highlights */
+
+    --text-color: #2c3e50; /* Dark Slate Blue/Gray - Softer than pure black */
     --light-text-color: #ffffff;
-    --background-color: #f8f9fa; /* Light Gray Background */
+    --background-color: #fdfdfd; /* Very light, almost white, for a clean look */
     --card-background: #ffffff;
-    --footer-background: #2c3e50; /* Dark Blue-Gray */
+    --footer-background: #27374D; /* Darker, desaturated blue for footer */
+
+    /* Fonts - Kept from previous modern theme as they are versatile */
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
     --font-hindi: 'Noto Sans Devanagari', sans-serif;
-    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --card-hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    --border-radius: 8px;
+
+    /* UI Elements */
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    --border-radius: 10px; /* Slightly more rounded */
 }
 
 /* Basic Reset */
@@ -125,7 +131,7 @@ main {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-banner.jpg') no-repeat center center/cover; /* Placeholder image */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/sri-lanka-hero-banner.jpg') no-repeat center center/cover; /* Updated Placeholder image */
     color: var(--light-text-color);
     padding: 6rem 2rem;
     text-align: center;

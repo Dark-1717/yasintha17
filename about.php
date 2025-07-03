@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
 <?php
-$pageTitle = "About Us";
+$pageTitle = "About LKD Travels";
 $activePage = "about";
 include 'templates/header.php';
 ?>
         <section id="about-us-content">
-            <h2 data-translate="aboutPageTitle">About GlobeTrotters</h2>
-            <img src="images/team-photo.jpg" alt="GlobeTrotters Team" style="width:100%; max-width:600px; margin: 20px auto; display:block; border-radius: var(--border-radius);">
+            <h2 data-translate="aboutPageTitle">About LKD Travels</h2>
+            <img src="images/team-photo.jpg" alt="LKD Travels Team" style="width:100%; max-width:600px; margin: 20px auto; display:block; border-radius: var(--border-radius);">
 
             <h3 data-translate="aboutOurStoryTitle">Our Story</h3>
-            <p data-translate="aboutOurStoryText">Founded in 2010, GlobeTrotters was born from a passion for travel and a desire to share the beauty of the world with others. We believe that travel is more than just visiting new places; it's about creating lasting memories, experiencing different cultures, and broadening one's horizons. Our founders, seasoned travelers themselves, wanted to create an agency that focused on personalized experiences and exceptional customer service.</p>
+            <p data-translate="aboutOurStoryText">Founded in 2010, LKD Travels was born from a passion for travel and a desire to share the beauty of the world with others. We believe that travel is more than just visiting new places; it's about creating lasting memories, experiencing different cultures, and broadening one's horizons. Our founders, seasoned travelers themselves, wanted to create an agency that focused on personalized experiences and exceptional customer service.</p>
 
             <h3 data-translate="aboutOurMissionTitle">Our Mission</h3>
-            <p data-translate="aboutOurMissionText">Our mission is to inspire and enable everyone to explore the world. We strive to provide seamless, enriching, and unforgettable travel experiences by offering curated destinations, personalized itineraries, and expert guidance. We are committed to responsible tourism and aim to make a positive impact on the places we visit.</p>
+            <p data-translate="aboutOurMissionText">Our mission is to inspire and enable everyone to explore the world with LKD Travels. We strive to provide seamless, enriching, and unforgettable travel experiences by offering curated destinations, personalized itineraries, and expert guidance. We are committed to responsible tourism and aim to make a positive impact on the places we visit.</p>
 
             <h3 data-translate="aboutWhyChooseUsTitle">Why Choose Us?</h3>
             <ul>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <?php
-$pageTitle = "Home";
+$pageTitle = "Welcome"; // More generic for homepage, header adds " - LKD Travels"
 $activePage = "home";
 include 'templates/header.php';
 ?>
@@ -14,30 +14,30 @@ include 'templates/header.php';
         </section>
 
         <section id="popular-destinations">
-            <h2 data-translate="popularDestinationsTitle">Popular Destinations</h2>
+            <h2 data-translate="popularDestinationsTitle">Popular Destinations in Sri Lanka</h2>
             <div class="grid-container">
                 <div class="destination">
-                    <img src="images/paris.jpg" alt="Paris, France">
+                    <img src="images/sigiriya-rock-fortress.jpg" alt="Sigiriya Rock Fortress, Sri Lanka">
                     <div class="card-content">
-                        <h3 data-translate="parisTitle">Paris, France</h3>
-                        <p data-translate="parisDescription">Experience the romance and charm of the City of Lights. Visit iconic landmarks like the Eiffel Tower and the Louvre Museum.</p>
-                        <a href="destinations.html#paris" class="btn-details" data-translate="viewDetails">View Details</a>
+                        <h3 data-translate="sigiriyaTitle">Sigiriya Rock Fortress</h3>
+                        <p data-translate="sigiriyaDescription">Climb the ancient Sigiriya Rock Fortress, a UNESCO World Heritage site, marvel at its frescoes and enjoy panoramic views.</p>
+                        <a href="destinations.php#sigiriya" class="btn-details" data-translate="viewDetails">View Details</a>
                     </div>
                 </div>
                 <div class="destination">
-                    <img src="images/rome.jpg" alt="Rome, Italy">
+                    <img src="images/ella-nine-arch-bridge.jpg" alt="Ella & Nine Arch Bridge, Sri Lanka">
                     <div class="card-content">
-                        <h3 data-translate="romeTitle">Rome, Italy</h3>
-                        <p data-translate="romeDescription">Explore ancient ruins, magnificent basilicas, and enjoy world-class Italian cuisine in the Eternal City.</p>
-                        <a href="destinations.html#rome" class="btn-details" data-translate="viewDetails">View Details</a>
+                        <h3 data-translate="ellaTitle">Ella & Nine Arch Bridge</h3>
+                        <p data-translate="ellaDescription">Experience the scenic beauty of Ella, hike to Ella Rock, and witness the iconic Nine Arch Bridge amidst lush tea plantations.</p>
+                        <a href="destinations.php#ella" class="btn-details" data-translate="viewDetails">View Details</a>
                     </div>
                 </div>
                 <div class="destination">
-                    <img src="images/tokyo.jpg" alt="Tokyo, Japan">
+                    <img src="images/mirissa-beach-whales.jpg" alt="Mirissa Beach & Whale Watching, Sri Lanka">
                     <div class="card-content">
-                        <h3 data-translate="tokyoTitle">Tokyo, Japan</h3>
-                        <p data-translate="tokyoDescription">Immerse yourself in a vibrant culture where ancient traditions meet futuristic technology. From serene temples to bustling cityscapes.</p>
-                        <a href="destinations.html#tokyo" class="btn-details" data-translate="viewDetails">View Details</a>
+                        <h3 data-translate="mirissaTitle">Mirissa Beach & Whale Watching</h3>
+                        <p data-translate="mirissaDescription">Relax on the golden sands of Mirissa Beach and embark on an exciting whale watching tour to spot majestic blue whales.</p>
+                        <a href="destinations.php#mirissa" class="btn-details" data-translate="viewDetails">View Details</a>
                     </div>
                 </div>
             </div>

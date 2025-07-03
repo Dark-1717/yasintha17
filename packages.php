@@ -3,51 +3,42 @@
 <head>
     <meta charset="UTF-8">
 <?php
-$pageTitle = "Travel Packages";
+$pageTitle = "Our Packages";
 $activePage = "packages";
 include 'templates/header.php';
 ?>
         <section id="packages-list">
-            <h2 data-translate="packagesPageTitle">Our Exclusive Travel Packages</h2>
-            <p data-translate="packagesPageSubtitle">Find the perfect curated package for your next adventure. We combine the best experiences at unbeatable prices.</p>
+            <h2 data-translate="packagesPageTitle">Sri Lanka Tour Packages by LKD Travels</h2>
+            <p data-translate="packagesPageSubtitle">Discover the best of Sri Lanka with our expertly crafted tour packages. Adventure, culture, wildlife, and relaxation await!</p>
 
             <div class="grid-container">
                 <div class="package-item">
-                    <img src="images/package-europe.jpg" alt="European Capitals Tour">
+                    <img src="images/package-cultural-triangle.jpg" alt="Sri Lanka Cultural Triangle Tour">
                     <div class="card-content">
-                        <h3 data-translate="packageEuropeTitle">European Capitals Tour (10 Days)</h3>
-                        <p data-translate="packageEuropeDescription">Explore the magic of Paris, Rome, and Barcelona. Includes guided tours, 4-star hotel stays, and inter-city travel. Immerse yourself in history, art, and culture.</p>
-                        <p class="price" data-translate="packageEuropePrice">Starting from $2499 per person</p>
-                        <a href="contact.html?package=europe-capitals" class="btn-details" data-translate="bookNow">Book Now</a>
+                        <h3 data-translate="packageCulturalTitle">Cultural Triangle Explorer (7 Days)</h3>
+                        <p data-translate="packageCulturalDescription">Journey through ancient kingdoms. Visit Anuradhapura, Polonnaruwa, Sigiriya, and Dambulla. Includes guided tours and comfortable stays.</p>
+                        <p class="price" data-translate="packageCulturalPrice">Starting from $950 per person</p>
+                        <a href="contact.php?package=cultural-explorer" class="btn-details" data-translate="bookNow">Book Now</a>
                     </div>
                 </div>
 
                 <div class="package-item">
-                    <img src="images/package-asia.jpg" alt="Southeast Asia Adventure">
+                    <img src="images/package-sri-lanka-safari.jpg" alt="Sri Lanka Wildlife Safari Adventure">
                     <div class="card-content">
-                        <h3 data-translate="packageAsiaTitle">Southeast Asia Adventure (14 Days)</h3>
-                        <p data-translate="packageAsiaDescription">Discover the wonders of Thailand, Vietnam, and Cambodia. Includes temple visits, cooking classes, beach relaxation, and vibrant city explorations. An unforgettable journey.</p>
-                        <p class="price" data-translate="packageAsiaPrice">Starting from $1999 per person</p>
-                        <a href="contact.html?package=se-asia-adventure" class="btn-details" data-translate="bookNow">Book Now</a>
+                        <h3 data-translate="packageSafariSLTitle">Sri Lankan Wildlife Safari (5 Days)</h3>
+                        <p data-translate="packageSafariSLDescription">Experience thrilling safaris in Yala and Udawalawe National Parks. Spot leopards, elephants, and diverse birdlife. Includes jeep safaris and eco-lodges.</p>
+                        <p class="price" data-translate="packageSafariSLPrice">Starting from $750 per person</p>
+                        <a href="contact.php?package=sl-wildlife-safari" class="btn-details" data-translate="bookNow">Book Now</a>
                     </div>
                 </div>
 
                 <div class="package-item">
-                    <img src="images/package-safari.jpg" alt="African Safari Experience">
+                    <img src="images/package-hill-coast.jpg" alt="Sri Lanka Hill Country and Coastal Escape">
                     <div class="card-content">
-                        <h3 data-translate="packageSafariTitle">African Safari Experience (7 Days)</h3>
-                        <p data-translate="packageSafariDescription">Witness the majestic wildlife of the Serengeti. Includes game drives, luxury lodge accommodation, and expert guides. A once-in-a-lifetime experience.</p>
-                        <p class="price" data-translate="packageSafariPrice">Starting from $3500 per person</p>
-                        <a href="contact.html?package=african-safari" class="btn-details" data-translate="bookNow">Book Now</a>
-                    </div>
-                </div>
-                <div class="package-item">
-                    <img src="images/package-cruise.jpg" alt="Caribbean Cruise">
-                    <div class="card-content">
-                        <h3 data-translate="packageCruiseTitle">Caribbean Cruise Getaway (7 Nights)</h3>
-                        <p data-translate="packageCruiseDescription">Sail through turquoise waters and visit stunning islands. All-inclusive package with onboard entertainment, gourmet dining, and exciting shore excursions.</p>
-                        <p class="price" data-translate="packageCruisePrice">Starting from $1299 per person</p>
-                        <a href="contact.html?package=caribbean-cruise" class="btn-details" data-translate="bookNow">Book Now</a>
+                        <h3 data-translate="packageHillCoastTitle">Hill Country & Coastal Bliss (10 Days)</h3>
+                        <p data-translate="packageHillCoastDescription">Explore lush tea plantations in Nuwara Eliya and Ella, then unwind on the beautiful southern beaches like Mirissa or Unawatuna.</p>
+                        <p class="price" data-translate="packageHillCoastPrice">Starting from $1200 per person</p>
+                        <a href="contact.php?package=hill-coastal-bliss" class="btn-details" data-translate="bookNow">Book Now</a>
                     </div>
                 </div>
             </div>

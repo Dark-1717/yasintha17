@@ -8,13 +8,13 @@ $activePage = isset($activePage) ? $activePage : ""; // e.g., "home", "destinati
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($pageTitle); ?> - GlobeTrotters</title>
+    <title><?php echo htmlspecialchars($pageTitle); ?> - LKD Travels</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Link to Google Fonts is in style.css via @import -->
 </head>
 <body class="<?php echo htmlspecialchars($activePage); ?>"> <!-- Add activePage class to body for potential page-specific styling -->
     <header>
-        <a href="index.php" class="logo">Globe<span>Trotters</span></a>
+        <a href="index.php" class="logo">LKD<span> Travels</span></a>
         <nav>
             <ul>
                 <li><a href="index.php" class="<?php echo ($activePage === 'home') ? 'active' : ''; ?>" data-translate="navHome">Home</a></li>
