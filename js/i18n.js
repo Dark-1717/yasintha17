@@ -12,11 +12,22 @@ const translations = {
         heroSubtitle: "Your adventure starts here. Discover amazing destinations and book your dream vacation.",
         heroCta: "View Packages",
 
+        // Hero Slideshow - index.html
+        slide1Title: "Discover Sigiriya's Majesty",
+        slide1Desc: "Ancient rock fortress with stunning views & history.",
+        slide1Cta: "Explore Sigiriya",
+        slide2Title: "Lush Tea Plantations",
+        slide2Desc: "Experience the vibrant green hills of Sri Lanka's tea country.",
+        slide2Cta: "Visit Tea Estates",
+        slide3Title: "Pristine Golden Beaches",
+        slide3Desc: "Relax and unwind on the beautiful sun-kissed beaches of Sri Lanka.",
+        slide3Cta: "Beach Adventures",
+
         // Popular Destinations - index.html
         popularDestinationsTitle: "Popular Destinations in Sri Lanka",
-        sigiriyaTitle: "Sigiriya Rock Fortress",
+        sigiriyaTitle: "Sigiriya Rock Fortress", // Also used in destinations.php
         sigiriyaDescription: "Climb the ancient Sigiriya Rock Fortress, a UNESCO World Heritage site, marvel at its frescoes and enjoy panoramic views.",
-        ellaTitle: "Ella & Nine Arch Bridge",
+        ellaTitle: "Ella & Nine Arch Bridge", // Also used in destinations.php
         ellaDescription: "Experience the scenic beauty of Ella, hike to Ella Rock, and witness the iconic Nine Arch Bridge amidst lush tea plantations.",
         mirissaTitle: "Mirissa Beach & Whale Watching",
         mirissaDescription: "Relax on the golden sands of Mirissa Beach and embark on an exciting whale watching tour to spot majestic blue whales.",
@@ -122,11 +133,22 @@ const translations = {
         heroSubtitle: "आपका रोमांच यहीं से शुरू होता है। अद्भुत गंतव्यों की खोज करें और अपनी सपनों की छुट्टी बुक करें।",
         heroCta: "पैकेज देखें",
 
+        // Hero Slideshow - index.html
+        slide1Title: "सीगिरिया की महिमा खोजें",
+        slide1Desc: " आश्चर्यजनक दृश्यों और इतिहास के साथ प्राचीन रॉक किला।",
+        slide1Cta: "सीगिरिया का अन्वेषण करें",
+        slide2Title: "हरे-भरे चाय के बागान",
+        slide2Desc: "श्रीलंका के चाय देश की जीवंत हरी पहाड़ियों का अनुभव करें।",
+        slide2Cta: "चाय बागानों की यात्रा करें",
+        slide3Title: "प्राचीन सुनहरे समुद्र तट",
+        slide3Desc: "श्रीलंका के खूबसूरत धूप चूमे समुद्र तटों पर आराम करें और तरोताजा हों।",
+        slide3Cta: "समुद्र तट के रोमांच",
+
         // Popular Destinations - index.html
         popularDestinationsTitle: "श्रीलंका में लोकप्रिय गंतव्य",
-        sigiriyaTitle: "सीगिरिया रॉक फोर्ट्रेस",
+        sigiriyaTitle: "सीगिरिया रॉक फोर्ट्रेस", // destinations.php में भी प्रयुक्त होता है
         sigiriyaDescription: "प्राचीन सीगिरिया रॉक किले पर चढ़ें, जो यूनेस्को की विश्व धरोहर स्थल है, इसके भित्तिचित्रों को देखें और मनोरम दृश्यों का आनंद लें।",
-        ellaTitle: "एला और नाइन आर्च ब्रिज",
+        ellaTitle: "एला और नाइन आर्च ब्रिज", // destinations.php में भी प्रयुक्त होता है
         ellaDescription: "एला की नैसर्गिक सुंदरता का अनुभव करें, एला रॉक तक बढ़ें, और हरे-भरे चाय बागानों के बीच प्रतिष्ठित नाइन आर्च ब्रिज देखें।",
         mirissaTitle: "मिरिसा बीच और व्हेल वाचिंग",
         mirissaDescription: "मिरिसा बीच की सुनहरी रेत पर आराम करें और राजसी नीली व्हेल देखने के लिए एक रोमांचक व्हेल देखने के दौरे पर निकलें।",

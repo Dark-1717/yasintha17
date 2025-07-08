@@ -129,36 +129,73 @@ main {
     margin: 0 auto; /* Center content */
 }
 
-/* Hero Section */
+/* Hero Section & Slideshow */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/sri-lanka-hero-banner.jpg') no-repeat center center/cover; /* Updated Placeholder image */
+    position: relative;
+    overflow: hidden;
+    min-height: 70vh; /* Or a fixed height like 500px, 600px */
     color: var(--light-text-color);
-    padding: 6rem 2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    border-radius: var(--border-radius);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh; /* Make hero section taller */
+    margin-bottom: 0; /* Remove bottom margin if dots are outside */
+    border-radius: var(--border-radius); /* Apply to container if slides are inside */
+    /* background: var(--accent-color); */ /* Fallback or loading background */
 }
 
-#hero h1 {
-    font-size: 3.5rem; /* Larger font size */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Match #hero min-height */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Hidden by default, JS will manage visibility */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Fade effect */
+}
+
+.slide.active-slide {
+    display: flex; /* Make active slide visible */
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Placeholder Backgrounds for Slides */
+.slide-1-bg { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/sri-lanka-sigiriya-hero.jpg'); }
+.slide-2-bg { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/sri-lanka-tea-plantation-hero.jpg'); }
+.slide-3-bg { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/sri-lanka-beach-hero.jpg'); }
+
+
+.slide-content {
+    max-width: 800px;
+    z-index: 2; /* Ensure text is above background */
+}
+
+.slide-content h1 {
+    font-size: 3.2rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
-#hero p {
-    font-size: 1.4rem;
+.slide-content p {
+    font-size: 1.3rem;
     margin-bottom: 2rem;
-    max-width: 700px; /* Limit width of paragraph */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    max-width: 650px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
-#hero .btn-cta {
+.slide-content .btn-cta { /* Reusing .btn-cta from general styles, ensuring it's visible */
     background-color: var(--secondary-color);
     color: var(--light-text-color);
     padding: 15px 30px;
@@ -167,19 +204,71 @@ main {
     font-weight: 700;
     font-size: 1.1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-#hero .btn-cta:hover {
-    background-color: #e05a00;
+.slide-content .btn-cta:hover {
+    background-color: #e05a00; /* Darker secondary */
     transform: translateY(-3px);
-    box-shadow: var(--card-hover-shadow);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Slideshow Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px; /* Vertically center */
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 3;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Slideshow Pagination Dots */
+.dots-container { /* New container for dots, to be placed below slideshow-container in HTML if preferred */
+    text-align:center;
+    padding: 10px 0;
+    /* margin-top: -30px; If dots are visually part of the hero */
+    /* position: relative; */ /* If inside hero, ensure z-index works */
+    /* z-index: 5; */
+}
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 4px;
+    background-color: rgba(255,255,255,0.5); /* Semi-transparent white */
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease, border-color 0.6s ease;
+}
+.dot.active, .dot:hover {
+    background-color: var(--secondary-color); /* Orange for active/hover */
+    border-color: var(--secondary-color);
 }
 
 
 /* General Section Styling */
-main section {
+main section { /* First section after hero might need more top margin */
     padding: 3rem 0;
+}
+main section:first-of-type { /* This targets #popular-destinations now */
+    margin-top: 40px; /* Add space if hero margin-bottom is removed */
     margin-bottom: 30px;
 }
 

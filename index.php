@@ -8,9 +8,41 @@ $activePage = "home";
 include 'templates/header.php';
 ?>
         <section id="hero">
-            <h1 data-translate="heroTitle">Explore the World with Us</h1>
-            <p data-translate="heroSubtitle">Your adventure starts here. Discover amazing destinations and book your dream vacation.</p>
-            <a href="packages.html" class="btn-cta" data-translate="heroCta">View Packages</a>
+            <div class="slideshow-container">
+                <!-- Slide 1 -->
+                <div class="slide slide-1-bg">
+                    <div class="slide-content">
+                        <h1 data-translate="slide1Title">Discover Sigiriya's Majesty</h1>
+                        <p data-translate="slide1Desc">Ancient rock fortress with stunning views & history.</p>
+                        <a href="destinations.php#sigiriya" class="btn-cta" data-translate="slide1Cta">Explore Sigiriya</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide slide-2-bg">
+                    <div class="slide-content">
+                        <h1 data-translate="slide2Title">Lush Tea Plantations</h1>
+                        <p data-translate="slide2Desc">Experience the vibrant green hills of Sri Lanka's tea country.</p>
+                        <a href="destinations.php#ella" class="btn-cta" data-translate="slide2Cta">Visit Tea Estates</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide slide-3-bg">
+                    <div class="slide-content">
+                        <h1 data-translate="slide3Title">Pristine Golden Beaches</h1>
+                        <p data-translate="slide3Desc">Relax and unwind on the beautiful sun-kissed beaches of Sri Lanka.</p>
+                        <a href="destinations.php#mirissa" class="btn-cta" data-translate="slide3Cta">Beach Adventures</a>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a class="prev" title="Previous">&#10094;</a>
+                <a class="next" title="Next">&#10095;</a>
+            </div>
+            <div class="dots-container" style="text-align:center; position:absolute; bottom: 20px; width:100%; z-index:10;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </section>
 
         <section id="popular-destinations">

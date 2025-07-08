@@ -108,5 +108,88 @@ document.addEventListener('DOMContentLoaded', function() {
     //     });
     // });
 
-    console.log("Modernized JavaScript file loaded. Site is interactive with language support.");
+    // Slideshow Logic
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    if (slideshowContainer) {
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-container .slide');
+        const dots = document.querySelectorAll('.dots-container .dot');
+        const prevButton = document.querySelector('.slideshow-container .prev');
+        const nextButton = document.querySelector('.slideshow-container .next');
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active-slide');
+                // Simple fade: For more complex like slide-in, would need more classes/logic
+                // slide.style.opacity = '0';
+                // if (i === index) {
+                //     slide.style.opacity = '1';
+                // }
+            });
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            if (slides[index]) {
+                slides[index].classList.add('active-slide');
+            }
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+            currentSlideIndex = index;
+        }
+
+        function nextSlide() {
+            let newIndex = currentSlideIndex + 1;
+            if (newIndex >= slides.length) {
+                newIndex = 0; // Loop back to first
+            }
+            showSlide(newIndex);
+        }
+
+        function prevSlide() {
+            let newIndex = currentSlideIndex - 1;
+            if (newIndex < 0) {
+                newIndex = slides.length - 1; // Loop back to last
+            }
+            showSlide(newIndex);
+        }
+
+        if (prevButton && nextButton) {
+            prevButton.addEventListener('click', function() {
+                prevSlide();
+                resetSlideInterval();
+            });
+            nextButton.addEventListener('click', function() {
+                nextSlide();
+                resetSlideInterval();
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                showSlide(index);
+                resetSlideInterval();
+            });
+        });
+
+        function startSlideInterval() {
+            slideInterval = setInterval(nextSlide, 7000); // Change slide every 7 seconds
+        }
+
+        function resetSlideInterval() {
+            clearInterval(slideInterval);
+            startSlideInterval();
+        }
+
+        // Initial setup
+        if (slides.length > 0) {
+            showSlide(0); // Show the first slide initially
+            startSlideInterval(); // Start autoplay
+
+            slideshowContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            slideshowContainer.addEventListener('mouseleave', startSlideInterval);
+        }
+    }
+
+    console.log("Modernized JavaScript file loaded. Site is interactive with language support and slideshow.");
 });
